@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mt Angels Comprehensive School - In God We Trust</title>
+    <meta name="description" content="Mt Angels Comprehensive School - Providing quality education with a focus on academic excellence, character development, and innovation.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/minimal.css}">
+</head>
+<body>
+
+    <!-- MODERN NAVBAR -->
+    <div th:replace="~{fragments/navbar :: navbar(activePage='home')}"></div>
+
+    <!-- HERO CAROUSEL -->
+    <section class="hero hero-carousel">
+        <!-- Background slides (auto-crossfade) -->
+        <div class="hero-slides">
+            <div class="hero-slide active" style="background-image: url('/images/hero/slide-1.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('/images/hero/slide-2.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('/images/hero/slide-3.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('/images/hero/slide-4.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('/images/hero/slide-5.jpeg');"></div>
+             <div class="hero-slide" style="background-image: url('/images/hero/slide-6.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('/images/hero/slide-7.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('/images/hero/slide-8.jpeg');"></div>
+
+        </div>
+
+        <!-- Dark gradient overlay for text legibility -->
+        <div class="hero-overlay"></div>
+
+        <!-- Foreground text (always visible, anchored left) -->
+        <div class="hero-content hero-content-left">
+            <span class="hero-eyebrow">Welcome to</span>
+            <h1>Mt Angels <em>Comprehensive</em> School</h1>
+            <p class="subtitle">Working Hard For Excellence</p>
+            <p class="hero-lead">A leading Primary &amp; Junior Secondary school in Laikipia County &mdash; nurturing over 1,500 learners with discipline, self-reliance and a passion for knowledge.</p>
+            <div class="hero-buttons">
+                <a href="/about" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Learn More
+                </a>
+                <a href="/contact" class="btn-hero btn-outline-hero">
+                    <i class="fas fa-envelope me-2"></i>
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Prev / Next arrow controls -->
+        <button type="button" class="hero-arrow hero-arrow-prev" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button type="button" class="hero-arrow hero-arrow-next" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Slide indicators -->
+        <div class="hero-indicators">
+            <button type="button" class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+            <button type="button" class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+            <button type="button" class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+            <button type="button" class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+            <button type="button" class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
+            <button type="button" class="hero-dot" data-slide="5" aria-label="Slide 6"></button>
+            <button type="button" class="hero-dot" data-slide="6" aria-label="Slide 7"></button>
+            <button type="button" class="hero-dot" data-slide="7" aria-label="Slide 8"></button>
+        </div>
+    </section>
+
+    <!-- FEATURED SECTIONS -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Mt Angels</h2>
+            <p class="section-subtitle">Discover what makes our school a beacon of excellence in education</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="feature-title">Academic Excellence</h3>
+                    <p class="feature-description">We maintain high academic standards with experienced teachers and comprehensive curriculum designed for success.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Character Development</h3>
+                    <p class="feature-description">Focus on holistic development including moral values, leadership skills, and community service.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="feature-title">Modern Facilities</h3>
+                    <p class="feature-description">State-of-the-art laboratories, library, sports facilities, and technology-enabled classrooms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="feature-title">Sports & Activities</h3>
+                    <p class="feature-description">Comprehensive sports programs and extracurricular activities for well-rounded development.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 class="feature-title">Innovation Hub</h3>
+                    <p class="feature-description">Cutting-edge technology and innovation programs preparing students for the future.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="feature-title">Pastoral Care</h3>
+                    <p class="feature-description">Comprehensive support system ensuring student wellbeing and personal growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS & ANNOUNCEMENTS -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">Latest News & Updates</h2>
+            <p class="section-subtitle">Stay informed about school events, achievements, and announcements</p>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                     <h3 class="news-title">Grade 9 Assessment Milestone</h3>
+<p class="news-excerpt">
+Our Grade 9 learners successfully completed their KJSEA, demonstrating strong competencies and readiness for Senior Secondary pathways.
+</p>
+<a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <div class="news-date">April 20, 2026</div>
+                        <h3 class="news-title">Science Fair Innovation Awards</h3>
+                        <p class="news-excerpt">Our students excelled at the National Science Fair, bringing home three gold medals and...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <div class="news-date">April 15, 2026</div>
+                        <h3 class="news-title">New Sports Complex Opening</h3>
+                        <p class="news-excerpt">We are excited to announce the opening of our new state-of-the-art sports complex featuring...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK STATS -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <h3 style="color: var(--primary-color); font-size: 2.5rem; font-weight: 800;">1500+</h3>
+                    <p style="color: #718096;">Students Enrolled</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h3 style="color: var(--primary-color); font-size: 2.5rem; font-weight: 800;">100+</h3>
+                    <p style="color: #718096;">Qualified Teachers</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h3 style="color: var(--primary-color); font-size: 2.5rem; font-weight: 800;">50+</h3>
+                    <p style="color: #718096;">Years of Excellence</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h3 style="color: var(--primary-color); font-size: 2.5rem; font-weight: 800;">A-</h3>
+                    <p style="color: #718096;">Mean Grade 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Hero carousel auto-rotate + dot navigation
+        (function() {
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.hero-dot');
+            if (!slides.length) return;
+            let current = 0;
+            let timer;
+            const INTERVAL = 5000;
+
+            function show(idx) {
+                slides[current].classList.remove('active');
+                dots[current] && dots[current].classList.remove('active');
+                current = (idx + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                dots[current] && dots[current].classList.add('active');
+            }
+            function next() { show(current + 1); }
+            function start() { timer = setInterval(next, INTERVAL); }
+            function stop() { clearInterval(timer); }
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => { stop(); show(i); start(); });
+            });
+
+            const prevBtn = document.querySelector('.hero-arrow-prev');
+            const nextBtn = document.querySelector('.hero-arrow-next');
+            if (prevBtn) prevBtn.addEventListener('click', () => { stop(); show(current - 1); start(); });
+            if (nextBtn) nextBtn.addEventListener('click', () => { stop(); show(current + 1); start(); });
+
+            start();
+        })();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe feature cards and news cards
+        document.querySelectorAll('.feature-card, .news-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

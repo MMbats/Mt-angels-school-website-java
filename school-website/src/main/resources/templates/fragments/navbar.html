@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+    <nav th:fragment="navbar" class="navbar navbar-expand-xl">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img th:src="@{/images/logo.png}" alt="Mt Angels Logo" class="navbar-logo">
+                <span class="brand-full">Mt Angels Comprehensive School</span>
+                <span class="brand-short">Mt Angels</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" th:classappend="${activePage == 'home'} ? 'active' : ''" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" th:classappend="${activePage == 'about'} ? 'active' : ''" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" th:classappend="${activePage == 'management'} ? 'active' : ''" href="/management">Management</a></li>
+                    <li class="nav-item"><a class="nav-link" th:classappend="${activePage == 'academics'} ? 'active' : ''" href="/academics">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" th:classappend="${activePage == 'gallery'} ? 'active' : ''" href="/gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" th:classappend="${activePage == 'tenders'} ? 'active' : ''" href="/tenders">Tenders</a></li>
+                    <li class="nav-item"><a class="nav-link" th:classappend="${activePage == 'innovation'} ? 'active' : ''" href="/innovation">Innovation</a></li>
+                    <li class="nav-item"><a class="nav-link" th:classappend="${activePage == 'charter'} ? 'active' : ''" href="/charter">Charter</a></li>
+                    <li class="nav-item"><a class="nav-link" th:classappend="${activePage == 'contact'} ? 'active' : ''" href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

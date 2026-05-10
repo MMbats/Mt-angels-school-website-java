@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mt Angels Comprehensive School</title>
+    <meta name="description" content="Learn about Mt Angels Comprehensive School - Our history, mission, vision, and commitment to excellence in education.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/minimal.css}">
+</head>
+<body>
+
+    <!-- MODERN NAVBAR -->
+    <div th:replace="~{fragments/navbar :: navbar(activePage='about')}"></div>
+
+    <!-- PAGE HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>About Mt Angels</h1>
+            <p class="subtitle">A Legacy of Excellence in Education</p>
+            <div class="hero-buttons">
+                <a href="#history" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-history me-2"></i>
+                    Our History
+                </a>
+                <a href="#mission" class="btn-hero btn-outline-hero">
+                    <i class="fas fa-bullseye me-2"></i>
+                    Our Mission
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="featured-section" id="mission">
+        <div class="container">
+            <h2 class="section-title">Our Mission & Vision</h2>
+            <p class="section-subtitle">Guiding principles that shape everything we do</p>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="feature-title">Our Mission</h3>
+                        <p class="feature-description">
+                            To instill in our pupils discipline and self-reliance for a better future.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="feature-title">Our Vision</h3>
+                        <p class="feature-description">
+                            To have competitive quality education that prepares pupils for careers in society.
+                        </p>
+                        <p class="feature-description mt-3">
+                            <strong>Motto:</strong> <em>Working Hard For Excellence</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="feature-title">Our Core Values</h3>
+                        <ul class="feature-description">
+                            <li><strong>Self Discipline:</strong> Mastering oneself to make right choices every day</li>
+                            <li><strong>Responsibility:</strong> Owning our actions and duties with maturity</li>
+                            <li><strong>Teamwork:</strong> Achieving more together than alone</li>
+                            <li><strong>Integrity:</strong> Doing the right thing even when no one is watching</li>
+                            <li><strong>Equity:</strong> Treating every learner fairly and inclusively</li>
+                            <li><strong>Loyalty:</strong> Standing by our school, family, and community</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="feature-title">Our Philosophy</h3>
+                        <p class="feature-description">
+                            We believe that education is not just about academic achievement but about developing the whole person. Our approach combines rigorous academics with character development, sports, arts, and community service to create well-rounded individuals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORY -->
+    <section class="news-section" id="history">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <p class="section-subtitle">From a community space to a leading school in Laikipia County</p>
+
+            <!-- Origins -->
+            <div class="feature-card mb-4">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h3 class="feature-title mb-3"><i class="fas fa-seedling me-2"></i>Humble Beginnings</h3>
+                        <p class="feature-description">
+                            Mt Angels traces its roots to a recreational center in Nyahururu town. Following a national directive to transform such spaces into community amenities, the site was converted into a nursery school in the 1990s &mdash; planting the first seeds of what is today a 1,500-pupil institution.
+                        </p>
+                        <p class="feature-description">
+                            The school was initially run by the Nyahururu Municipal Council. As costs rose, parents working at Nyahururu market stepped in and, through public participation, took over its management. They formed the first School Management Committee &mdash; among them <strong>Mr. Wanyoike, Mr. Warugongo, and Mr. Muchiri</strong> &mdash; whose leadership kept the doors open.
+                        </p>
+                        <p class="feature-description">
+                            In 1999, the school grew into Standard 1 and welcomed its first government-posted teacher, <strong>Madam Mercy Ngatia</strong>, who served as both teacher and headteacher. That same period, the school land faced a serious threat when interests in the municipality moved to subdivide it for private development. The matter went to court, where <strong>Lawyer Mirugi Kariuki of Nakuru</strong> successfully defended the school's land &mdash; a turning point that secured the school's future.
+                        </p>
+                        <p class="feature-description">
+                            Through limited but determined resources, parents built classrooms and sustained a lunch programme that helped fund infrastructure. When Free Primary Education was introduced in 2003, the community protected the feeding programme, and it continues to nourish learners to this day.
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <h4 class="mb-3">Key Milestones</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h5>1990s</h5>
+                                <p>Founded as a community nursery school</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Late 1990s</h5>
+                                <p>Parents take over management; first SMC formed</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>1999</h5>
+                                <p>School grows to Standard 1; first government teacher posted</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>1999</h5>
+                                <p>School land successfully defended in court</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>2003</h5>
+                                <p>Lunch programme sustained alongside Free Primary Education</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>2010</h5>
+                                <p>Two-storey classroom block completed</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Today</h5>
+                                <p>Over 1,500 learners across ECDE, Primary &amp; JSS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today -->
+            <div class="feature-card mb-4">
+                <h3 class="feature-title mb-3"><i class="fas fa-school me-2"></i>Mt Angels Today</h3>
+                <p class="feature-description">
+                    Mt Angels is now recognised as a leading provider of Primary and Junior Secondary education in Laikipia County. The school serves <strong>over 1,500 learners</strong> from ECDE through to JSS, supported by a highly motivated teaching team.
+                </p>
+                <p class="feature-description">
+                    Our learners have consistently posted strong results in national assessments &mdash; from KCPE in past years to today's Competency Based Education (CBE) assessments &mdash; reflecting a culture of academic discipline grounded in our motto: <em>Working Hard For Excellence.</em>
+                </p>
+            </div>
+
+            <!-- Future -->
+            <div class="feature-card">
+                <h3 class="feature-title mb-3"><i class="fas fa-rocket me-2"></i>Building for the Future</h3>
+                <p class="feature-description">
+                    The shift to <strong>Competency Based Education (CBE)</strong> calls for modern, well-equipped learning spaces. To match our growing population and the demands of the new curriculum, we are expanding our infrastructure with new classrooms, sanitation facilities, a computer room, a library, and a home science room.
+                </p>
+                <p class="feature-description">
+                    These spaces are designed to inspire curiosity, foster innovation, and give every learner the opportunity to develop applicable knowledge, attitudes, and skills for life and career.
+                </p>
+                <p class="feature-description">
+                    <a href="/contact#support" class="read-more"><i class="fas fa-heart me-1"></i> Support our development fund</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Our Achievements</h2>
+            <p class="section-subtitle">Celebrating excellence across all domains</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="feature-title">Academic Excellence</h3>
+                    <p class="feature-description">
+                        Consistent KCPE performance for the past 10 years. 75% of our graduates proceed to top highschools.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="feature-title">Top Co-curricular Activities</h3>
+                    <p class="feature-description">
+                        In the attempt to make our players active outside the classrooms we take them for trips to different spots that offer services like swimmimg and team building.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 class="feature-title">Sports Excellence</h3>
+                    <p class="feature-description">
+                        Regional champions in football and athletics. Our sports program has produced national team players and sports scholars.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="feature-title">Arts & Culture</h3>
+                    <p class="feature-description">
+                        National music festival winners and drama champions. Our cultural programs celebrate diversity and preserve our rich heritage.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Community Service</h3>
+                    <p class="feature-description">
+                        Recognized for outstanding community outreach programs. Our students regularly participate in environmental conservation and social welfare initiatives.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="feature-title">Scholarship Programs </h3>
+                    <p class="feature-description">
+                        International exchange programs with schools in Europe, Asia, and America. Our Top students gain global perspectives through cultural exchanges.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEET THE TEAM CTA -->
+    <section class="news-section">
+        <div class="container">
+            <div class="feature-card text-center">
+                <div class="feature-icon mx-auto"><i class="fas fa-users"></i></div>
+                <h3 class="feature-title">Meet Our Management Team</h3>
+                <p class="feature-description mb-4">
+                    Get to know the Principal, Deputy, Heads of Department, BOM and PTA leaders who keep Mt Angels running.
+                </p>
+                <a href="/management" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-arrow-right me-2"></i>
+                    View Management Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

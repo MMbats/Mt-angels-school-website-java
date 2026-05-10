@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Delivery Charter - Mt Angels Comprehensive School</title>
+    <meta name="description" content="Mt Angels Comprehensive School Service Delivery Charter - our commitment to transparent, timely, and quality service to learners, parents, and the community.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/minimal.css}">
+    <style>
+        .charter-table thead th {
+            background: var(--primary-color);
+            color: var(--text-light);
+            font-weight: 600;
+            border: none;
+        }
+        .charter-table tbody tr:hover { background: rgba(102, 126, 234, 0.05); }
+        .charter-table td, .charter-table th { vertical-align: middle; padding: 0.9rem 1rem; }
+        .charter-table .badge-free {
+            background: #c6f6d5; color: #22543d;
+            padding: 0.25rem 0.6rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div th:replace="~{fragments/navbar :: navbar(activePage='charter')}"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Service Delivery Charter</h1>
+            <p class="subtitle">Our commitment to transparent, timely and quality service</p>
+            <div class="hero-buttons">
+                <a href="#charter" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-list-check me-2"></i>
+                    View Services
+                </a>
+                <a href="/contact" class="btn-hero btn-outline-hero">
+                    <i class="fas fa-comments me-2"></i>
+                    Give Feedback
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMITMENT -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Our Commitment to You</h2>
+            <p class="section-subtitle">Working Hard For Excellence &mdash; in every interaction, every day</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto"><i class="fas fa-handshake"></i></div>
+                        <h3 class="feature-title">Courtesy &amp; Respect</h3>
+                        <p class="feature-description">Every learner, parent and visitor is welcomed and served with dignity.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto"><i class="fas fa-stopwatch"></i></div>
+                        <h3 class="feature-title">Timely Service</h3>
+                        <p class="feature-description">Clear timelines for every service &mdash; with no hidden charges.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto"><i class="fas fa-shield-halved"></i></div>
+                        <h3 class="feature-title">Integrity</h3>
+                        <p class="feature-description">Honest, transparent and accountable processes guided by our core values.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHARTER TABLE -->
+    <section class="news-section" id="charter">
+        <div class="container">
+            <h2 class="section-title">Services Rendered</h2>
+            <p class="section-subtitle">Officer in charge, requirements, charges and timelines for each service</p>
+
+            <div class="feature-card p-0" style="overflow: hidden;">
+                <div class="table-responsive">
+                    <table class="table charter-table mb-0">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Service Rendered</th>
+                                <th>Officer In-Charge</th>
+                                <th>Requirements</th>
+                                <th>Charges</th>
+                                <th>Timeline</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Reception / Customer Care</td>
+                                <td>Secretary &middot; Security Personnel</td>
+                                <td>Security check, ID Card / Visitors Book</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>10 minutes</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Teaching</td>
+                                <td>All Teachers</td>
+                                <td>Lesson plan, lesson notes, timetable, schemes of work</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>30 &ndash; 35 minutes</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Correspondence</td>
+                                <td>Headteacher</td>
+                                <td>Letters / Circular / Voice Calls / Emails / SMS</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>2 days</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Admission of pupils to other classes</td>
+                                <td>Headteacher &middot; Academic Committee</td>
+                                <td>Availability of vacancy, academic performance, interview</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>1 day</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Determination of Pupil's Discipline</td>
+                                <td>Headteacher / Deputy / Discipline Committee</td>
+                                <td>Initial evidence</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>Immediately</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Determination of Staff Discipline</td>
+                                <td>Headteacher / BOM</td>
+                                <td>Initial evidence</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>2 weeks</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>School's participation in co-curricular activities</td>
+                                <td>Headteacher / Deputy / Curriculum Officers</td>
+                                <td>Prepared teams in various activities</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>Calendar of events</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Admission / Boarding</td>
+                                <td>Boarding Master / Mistress / Matron</td>
+                                <td>Boarding / personal requirements</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>Beginning of the year</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Guidance and Counseling</td>
+                                <td>Guidance &amp; Counseling Committee</td>
+                                <td>Availability of clients</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>Immediately</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Parents / Stakeholders visits</td>
+                                <td>Respective officer to be seen</td>
+                                <td>Signing of Visitors Book, registration at the gate, customer care</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>Throughout the year</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Receiving school supplies</td>
+                                <td>Headteacher / Storekeeper / Matron</td>
+                                <td>L.P.O and delivery note</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>10 minutes</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Payment for goods and services</td>
+                                <td>Headteacher</td>
+                                <td>Invoice, delivery notes, L.P.O contract agreement</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>1 month</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Release of Leaving Certificate, Result Slip, K.C.P.E Certificate</td>
+                                <td>Headteacher / Deputy / Senior Teacher</td>
+                                <td>Fully signed clearance form</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>30 minutes</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Recruitment of BOM teachers and Non-teaching staff</td>
+                                <td>BOM</td>
+                                <td>Availability of vacancy, interview, curriculum vitae</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>2 weeks</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Competency Based Curriculum Education (CBC/CBE)</td>
+                                <td>Headteacher / Academic Board</td>
+                                <td>Hand books and manuals, course books &amp; teachers guide</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>Instructions from MoE</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Special Needs Education Curriculum Learning</td>
+                                <td>Adapted Specialist</td>
+                                <td>Specialised syllabuses and programmes, special learning materials</td>
+                                <td><span class="badge-free">Free</span></td>
+                                <td>Instructions from MoE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Compliments &amp; Complaints</h2>
+            <p class="section-subtitle">We take your feedback seriously &mdash; help us serve you better</p>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-envelope-open-text"></i></div>
+                        <h3 class="feature-title">How to Reach Us</h3>
+                        <p class="feature-description">
+                            <strong>Phone:</strong> <a href="tel:+254715580651">+254 715 580 651</a><br>
+                            <strong>Primary email:</strong> <a href="mailto:mtangelprischool@gmail.com">mtangelprischool@gmail.com</a><br>
+                            <strong>JSS email:</strong> <a href="mailto:mtangelsjsschool@gmail.com">mtangelsjsschool@gmail.com</a><br>
+                            <strong>Visit:</strong> Koinange Street, Iguamiti Ward, Nyahururu, Laikipia
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h3 class="feature-title">Escalation</h3>
+                        <p class="feature-description">
+                            Unresolved matters may be escalated to:
+                        </p>
+                        <ul class="feature-description">
+                            <li>The Sub-County Director of Education / TSC, Nyahururu Sub-County (P.O. Box 124, Nyahururu)</li>
+                            <li>TSC Nanyuki Office (P.O. Box 484, Nanyuki)</li>
+                            <li>The Commission on Administrative Justice (Office of the Ombudsman)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>

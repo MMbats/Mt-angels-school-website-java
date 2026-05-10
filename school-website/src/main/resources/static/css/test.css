@@ -1,0 +1,9 @@
+/* Simple test CSS */
+body {
+    background-color: #f0f0f0 !important;
+}
+
+.test-style {
+    color: red !important;
+    font-size: 24px !important;
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mt Angels Comprehensive School</title>
+    <meta name="description" content="Get in touch with Mt Angels Comprehensive School - Contact information, location, and inquiry forms.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/minimal.css}">
+</head>
+<body>
+
+    <!-- MODERN NAVBAR -->
+    <div th:replace="~{fragments/navbar :: navbar(activePage='contact')}"></div>
+
+    <!-- PAGE HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p class="subtitle">Get in Touch with Mt Angels Comprehensive School</p>
+            <div class="hero-buttons">
+                <a href="#contact-form" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-envelope me-2"></i>
+                    Send Message
+                </a>
+                <a href="#directions" class="btn-hero btn-outline-hero">
+                    <i class="fas fa-map-marked-alt me-2"></i>
+                    Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT INFORMATION -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">We're here to help and answer any questions you might have</p>
+            
+            <div class="row mb-5">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Physical Address</h3>
+                        <p class="feature-description">
+                            Koinange Street, Iguamiti Ward<br>
+                            Ndunyo Sub-location, Nyahururu<br>
+                            Laikipia County, Kenya
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="feature-title">Phone Numbers</h3>
+                        <p class="feature-description">
+                            Main Office: <a href="tel:+254715580651">+254 715 580 651</a><br>
+                            Fundraising: <a href="tel:+254701948930">+254 701 948 930</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="feature-title">Email Addresses</h3>
+                        <p class="feature-description">
+                            Primary: <a href="mailto:mtangelprischool@gmail.com">mtangelprischool@gmail.com</a><br>
+                            JSS: <a href="mailto:mtangelsjsschool@gmail.com">mtangelsjsschool@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM & MAP -->
+    <section class="news-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <h3 class="feature-title mb-4">Send Us a Message</h3>
+                        <form id="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select class="form-control" id="subject" required>
+                                    <option value="">Select Subject</option>
+                                    <option value="admissions">Admissions Inquiry</option>
+                                    <option value="general">General Information</option>
+                                    <option value="academics">Academic Programs</option>
+                                    <option value="fees">Fee Information</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-hero btn-primary-hero w-100">
+                                <i class="fas fa-paper-plane me-2"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <h3 class="feature-title mb-4">Office Hours</h3>
+                        <div class="mb-4">
+                            <h5>Regular Office Hours</h5>
+                            <p class="feature-description">
+                                Monday - Friday: 8:00 AM - 5:00 PM<br>
+                                Saturday: 9:00 AM - 1:00 PM<br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+                        <div class="mb-4">
+                            <h5>Admissions Office</h5>
+                            <p class="feature-description">
+                                Monday - Friday: 8:00 AM - 4:00 PM<br>
+                                Saturday: 9:00 AM - 12:00 PM
+                            </p>
+                        </div>
+                        <div class="mb-4">
+                            <h5>School Hours</h5>
+                            <p class="feature-description">
+                                Monday - Friday: 7:30 AM - 4:30 PM<br>
+                                Saturday: 8:00 AM - 12:30 PM
+                            </p>
+                        </div>
+                        <div class="alert alert-info mt-4">
+                            <i class="fas fa-info-circle me-2"></i>
+                            For urgent matters outside office hours, please call our emergency line.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="featured-section" id="directions">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <p class="section-subtitle">Find us on Koinange Street, Nyahururu, Laikipia County</p>
+            
+            <div class="feature-card">
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://www.google.com/maps?q=0.034167,36.356073&hl=en&z=16&output=embed"
+                        style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="mt-4">
+                    <h4>Getting Here</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5><i class="fas fa-bus me-2"></i>Public Transport</h5>
+                            <p>Matatus and PSV stages drop you a short walk from Koinange Street, Nyahururu town.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5><i class="fas fa-car me-2"></i>Private Vehicle</h5>
+                            <p>Coordinates: <strong>0.034167&deg; N, 36.356073&deg; E</strong>. Parking available at the school gate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUPPORT / PAYBILL -->
+    <section class="news-section" id="support">
+        <div class="container">
+            <h2 class="section-title">Support Our School</h2>
+            <p class="section-subtitle">Pay fees or contribute to our infrastructure development fund</p>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3 class="feature-title">M-PESA Paybill (ECDE &amp; Primary)</h3>
+                        <p class="feature-description">
+                            <strong>Paybill:</strong> 247247<br>
+                            <strong>Account No:</strong> 859018
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3 class="feature-title">M-PESA Paybill (Junior School)</h3>
+                        <p class="feature-description">
+                            <strong>Paybill:</strong> 247247<br>
+                            <strong>Account No:</strong> 942427
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-university"></i></div>
+                        <h3 class="feature-title">Equity Bank (Collection)</h3>
+                        <p class="feature-description">
+                            <strong>Account Name:</strong> Mt Angels Sch Collection<br>
+                            <strong>Account No:</strong> 0160284589603
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-info">
+                <i class="fas fa-heart me-2"></i>
+                <strong>Building for the Future:</strong> Funds support new classrooms, a library, computer room, and home science room as we transition to the Competency Based Education (CBE) curriculum.
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Show success message
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check me-2"></i>Message Sent!';
+            button.classList.add('btn-success');
+            
+            // Reset form after 3 seconds
+            setTimeout(() => {
+                this.reset();
+                button.innerHTML = originalText;
+                button.classList.remove('btn-success');
+            }, 3000);
+            
+            console.log('Form submitted:', formData);
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

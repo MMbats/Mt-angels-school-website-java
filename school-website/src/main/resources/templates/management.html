@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management - Mt Angels Comprehensive School</title>
+    <meta name="description" content="Meet the leadership and management team of Mt Angels Comprehensive School - administration, BOM, PTA and Heads of Department.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/minimal.css}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div th:replace="~{fragments/navbar :: navbar(activePage='management')}"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The School Management</h1>
+            <p class="subtitle">The teams that keep Mt Angels running</p>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 mx-auto text-center">
+                    <h2 class="section-title">Led by Service, United by Purpose</h2>
+                    <p style="color: #4a5568; font-size: 1.05rem; line-height: 1.8;">
+                        Mt Angels Comprehensive School is led by a team of dedicated educators, governors and parents who offer selfless service to the school community. Together, they uphold our motto &mdash; <em>Working Hard For Excellence.</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PRINCIPAL -->
+    <section class="news-section">
+        <div class="container">
+            <div class="principal-feature">
+                <div class="row g-0 align-items-stretch">
+                    <div class="col-md-5">
+                        <figure class="principal-photo">
+                            <img th:src="@{/images/staff/principal.jpg}" alt="Liberata Mbatia, Principal"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();">
+                            <div class="principal-photo-fallback"><i class="fas fa-user-tie"></i></div>
+                        </figure>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="principal-body">
+                            <span class="staff-role">Principal</span>
+                            <h2 class="principal-name">Liberata Mbatia</h2>
+                            <p class="principal-meta">Educationist &middot; 25+ years of experience</p>
+                            <p class="principal-message">
+                                "At Mt Angels, we believe every learner carries unlimited potential. Our role is to nurture that potential through discipline, self-reliance and a relentless pursuit of excellence. We are proud of our journey from a humble nursery to a leading 1,500-pupil institution &mdash; and we remain committed to building an even brighter future for every child who walks through our gates."
+                            </p>
+                            <p class="principal-signature">&mdash; Principal's Welcome</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            <!-- DEPUTY & SENIOR TEACHER -->
+            <div class="row mt-4 g-4">
+                <div class="col-md-6">
+                    <div class="leader-feature">
+                        <figure class="leader-photo">
+                            <img th:src="@{/images/staff/deputy-principal.jpg}" alt="Misheck Nderitu, Deputy Principal"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();">
+                            <div class="leader-photo-fallback"><i class="fas fa-chalkboard-teacher"></i></div>
+                        </figure>
+                        <div class="leader-body">
+                            <span class="staff-role">Deputy Principal</span>
+                            <h3 class="leader-name">Misheck Nderitu</h3>
+                            <p class="leader-meta">M.Ed. Curriculum Development &middot; 15+ years</p>
+                            <p class="leader-bio">Oversees curriculum implementation and academic standards across Primary and Junior Secondary, ensuring every classroom delivers on the CBE promise.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="leader-feature">
+                        <figure class="leader-photo">
+                            <img th:src="@{/images/staff/senior-teacher.jpg}" alt="Irene Ndungu, Senior Teacher"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();">
+                            <div class="leader-photo-fallback"><i class="fas fa-graduation-cap"></i></div>
+                        </figure>
+                        <div class="leader-body">
+                            <span class="staff-role">Senior Teacher</span>
+                            <h3 class="leader-name">Irene Ndungu</h3>
+                            <p class="leader-meta">M.Sc. Mathematics &middot; 12+ years</p>
+                            <p class="leader-bio">Champions strong numeracy foundations across the school and mentors junior teachers in the Mathematics department.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM GROUPS GRID -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Our Teams</h2>
+            <p class="section-subtitle">Four pillars that hold the school together</p>
+
+            <div class="row">
+                <!-- Board of Management -->
+                <div class="col-lg-6 mb-4">
+                    <article class="team-group-card">
+                        <header class="team-group-header">
+                            <h3 class="team-group-title">Board of Management</h3>
+                            <p class="team-group-desc">
+                                The BOM provides strategic oversight and governance for the school. Led by the Chairperson, the team ensures Mt Angels operates with integrity, accountability and a clear focus on the welfare of every learner.
+                            </p>
+                        </header>
+                        <figure class="team-group-photo">
+                            <img th:src="@{/images/groups/bom-team.jpg}" alt="Mt Angels Board of Management"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-gavel"></i>
+                                <span>Photo coming soon</span>
+                            </div>
+                        </figure>
+                    </article>
+                </div>
+
+                <!-- Parents Teachers Association -->
+                <div class="col-lg-6 mb-4">
+                    <article class="team-group-card">
+                        <header class="team-group-header">
+                            <h3 class="team-group-title">Parents Teachers Association</h3>
+                            <p class="team-group-desc">
+                                The PTA bridges parents and the school, championing the partnerships that make our learners' success possible. From feeding programmes to infrastructure projects, the PTA is the heartbeat of the Mt Angels community.
+                            </p>
+                        </header>
+                        <figure class="team-group-photo">
+                            <img th:src="@{/images/groups/pta-team.jpg}" alt="Mt Angels Parents Teachers Association"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-people-roof"></i>
+                                <span>Photo coming soon</span>
+                            </div>
+                        </figure>
+                    </article>
+                </div>
+
+                <!-- School Administration -->
+                <div class="col-lg-6 mb-4">
+                    <article class="team-group-card">
+                        <header class="team-group-header">
+                            <h3 class="team-group-title">School Administration</h3>
+                            <p class="team-group-desc">
+                                Led by the Principal, the administration is made up of the Deputy Principal, Senior Teachers and support staff. Together, they handle the day-to-day running of the school &mdash; from curriculum delivery to discipline, welfare and operations.
+                            </p>
+                        </header>
+                        <figure class="team-group-photo">
+                            <img th:src="@{/images/groups/administration-team.jpg}" alt="Mt Angels School Administration team"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Photo coming soon</span>
+                            </div>
+                        </figure>
+                    </article>
+                </div>
+
+                <!-- Heads of Department -->
+                <div class="col-lg-6 mb-4">
+                    <article class="team-group-card">
+                        <header class="team-group-header">
+                            <h3 class="team-group-title">Heads of Department</h3>
+                            <p class="team-group-desc">
+                                Our HODs lead academic excellence across Mathematics, Languages, Sciences, Creative Arts and Pre-Technical Studies. They drive curriculum quality, mentor teachers and ensure every learner gets the very best instruction.
+                            </p>
+                        </header>
+                        <figure class="team-group-photo">
+                            <img th:src="@{/images/groups/hods-team.jpg}" alt="Mt Angels Heads of Department"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>Photo coming soon</span>
+                            </div>
+                        </figure>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="news-section">
+        <div class="container">
+            <div class="feature-card text-center">
+                <h3 class="feature-title">Want to get in touch with our team?</h3>
+                <p class="feature-description mb-4">
+                    Reach out to the school office for any administrative matter, admissions inquiry or partnership.
+                </p>
+                <a href="/contact" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-envelope me-2"></i>
+                    Contact the School
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>
