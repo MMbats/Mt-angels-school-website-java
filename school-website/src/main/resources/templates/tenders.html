@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenders - Mt Angels Comprehensive School</title>
+    <meta name="description" content="Current and past tenders at Mt Angels Comprehensive School - procurement opportunities and notices.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/minimal.css}">
+    <style>
+        .tender-card { background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e8ecf1; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .tender-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .tender-status { display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        .status-open { background: #c6f6d5; color: #22543d; }
+        .status-closed { background: #fed7d7; color: #822727; }
+        .status-upcoming { background: #bee3f8; color: #2a4365; }
+        .tender-meta { display: flex; flex-wrap: wrap; gap: 20px; margin: 16px 0; color: #718096; font-size: 0.9rem; }
+        .tender-meta span i { margin-right: 6px; color: var(--primary-color); }
+        .tender-ref { font-family: monospace; background: #f0f4ff; padding: 2px 10px; border-radius: 6px; font-size: 0.85rem; color: var(--primary-color); }
+        .no-tenders { text-align: center; padding: 60px 20px; color: #a0aec0; }
+        .no-tenders i { font-size: 4rem; margin-bottom: 16px; display: block; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div th:replace="~{fragments/navbar :: navbar(activePage='tenders')}"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Tenders &amp; Procurement</h1>
+            <p class="subtitle">Transparency in procurement &mdash; opportunities to partner with Mt Angels</p>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 mx-auto text-center">
+                    <h2 class="section-title">Current &amp; Upcoming Tenders</h2>
+                    <p style="color: #4a5568; font-size: 1.05rem; line-height: 1.8;">
+                        Mt Angels Comprehensive School is committed to transparent and fair procurement. Below are the current, upcoming, and recently closed tenders. Interested suppliers and contractors are encouraged to apply within the stated deadlines.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPEN TENDERS -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-file-contract me-2"></i>Open Tenders</h2>
+            <p class="section-subtitle">Currently accepting applications</p>
+
+            <!-- No tenders message (show when there are no open tenders) -->
+            <div class="feature-card">
+                <div class="no-tenders">
+                    <i class="fas fa-folder-open"></i>
+                    <h4>No Open Tenders at This Time</h4>
+                    <p>Check back regularly for new procurement opportunities. You can also contact the school office to be added to our supplier notification list.</p>
+                </div>
+            </div>
+
+            <!--
+            TEMPLATE FOR ADDING NEW TENDERS:
+            Copy the block below and fill in the details for each new tender.
+
+            <div class="tender-card mb-4">
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                    <div>
+                        <span class="tender-ref">MT/TENDER/2026/001</span>
+                        <h3 class="feature-title mt-2">Supply of Laboratory Equipment</h3>
+                    </div>
+                    <span class="tender-status status-open">Open</span>
+                </div>
+                <div class="tender-meta">
+                    <span><i class="fas fa-calendar-alt"></i>Published: 1 May 2026</span>
+                    <span><i class="fas fa-clock"></i>Deadline: 31 May 2026, 4:00 PM</span>
+                    <span><i class="fas fa-tag"></i>Category: Supplies</span>
+                </div>
+                <p class="feature-description">
+                    Brief description of the tender requirements, scope of work, and any eligibility criteria.
+                </p>
+                <div class="mt-3">
+                    <a href="#" class="btn-hero btn-primary-hero" style="font-size: 0.9rem; padding: 8px 20px;">
+                        <i class="fas fa-download me-2"></i>Download Tender Document
+                    </a>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+
+    <!-- UPCOMING TENDERS -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-calendar-check me-2"></i>Upcoming Tenders</h2>
+            <p class="section-subtitle">Tenders expected to be published soon</p>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="tender-card">
+                        <span class="tender-status status-upcoming">Upcoming</span>
+                        <h3 class="feature-title mt-2">Infrastructure Expansion</h3>
+                        <p class="feature-description">
+                            Tenders related to ongoing school infrastructure development including classroom construction, library, computer room, and home science room as part of the CBC transition.
+                        </p>
+                        <p style="color: #718096; font-size: 0.9rem;"><i class="fas fa-info-circle me-2"></i>Details to be announced</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="tender-card">
+                        <span class="tender-status status-upcoming">Upcoming</span>
+                        <h3 class="feature-title mt-2">School Supplies &amp; Equipment</h3>
+                        <p class="feature-description">
+                            Annual procurement of learning materials, office supplies, and classroom equipment for the academic year.
+                        </p>
+                        <p style="color: #718096; font-size: 0.9rem;"><i class="fas fa-info-circle me-2"></i>Details to be announced</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSED TENDERS -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-archive me-2"></i>Closed Tenders</h2>
+            <p class="section-subtitle">Recently completed procurement processes</p>
+
+            <div class="feature-card">
+                <div class="no-tenders">
+                    <i class="fas fa-archive"></i>
+                    <h4>No Closed Tenders to Display</h4>
+                    <p>Past tender records will be archived here for transparency and reference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW TO APPLY -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">How to Apply</h2>
+            <p class="section-subtitle">Steps for submitting your tender application</p>
+
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto"><i class="fas fa-download"></i></div>
+                        <h3 class="feature-title">1. Download</h3>
+                        <p class="feature-description">Download the tender document from this page or collect it from the school office.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto"><i class="fas fa-file-alt"></i></div>
+                        <h3 class="feature-title">2. Prepare</h3>
+                        <p class="feature-description">Read all requirements carefully and prepare your bid with all requested documentation.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto"><i class="fas fa-envelope"></i></div>
+                        <h3 class="feature-title">3. Submit</h3>
+                        <p class="feature-description">Submit your sealed bid to the school office before the stated deadline.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto"><i class="fas fa-check-circle"></i></div>
+                        <h3 class="feature-title">4. Award</h3>
+                        <p class="feature-description">Successful bidders will be notified in writing after the evaluation process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="news-section">
+        <div class="container">
+            <div class="feature-card text-center">
+                <h3 class="feature-title">Questions About Tenders?</h3>
+                <p class="feature-description mb-4">
+                    Contact the school office for tender-related inquiries, supplier registration, or to request to be added to our notification list.
+                </p>
+                <a href="/contact" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-phone me-2"></i>
+                    Contact Procurement Office
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.feature-card, .tender-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

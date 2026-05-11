@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation &amp; Development - Mt Angels Comprehensive School</title>
+    <meta name="description" content="TFalls Foundation projects at Mt Angels Comprehensive School - 6-classroom storey building, TFalls Field, and infrastructure development.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/minimal.css}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div th:replace="~{fragments/navbar :: navbar(activePage='innovation')}"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Innovation &amp; Development</h1>
+            <p class="subtitle">Building for the future, one project at a time</p>
+            <div class="hero-buttons">
+                <a href="#tfalls" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-building me-2"></i>TFalls Foundation
+                </a>
+                <a href="#field" class="btn-hero btn-outline-hero">
+                    <i class="fas fa-futbol me-2"></i>TFalls Field
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 mx-auto text-center">
+                    <h2 class="section-title">TFalls Foundation</h2>
+                    <p style="color: #4a5568; font-size: 1.05rem; line-height: 1.8;">
+                        The TFalls Foundation has been a transformative partner in Mt Angels' growth story. Through strategic investments in infrastructure, the Foundation is helping the school meet the demands of the Competency Based Curriculum and provide a world-class learning environment for over 1,400 learners.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT 1: 6-CLASSROOM STOREY BUILDING -->
+    <section class="news-section" id="tfalls">
+        <div class="container">
+            <h2 class="section-title">TFalls 6-Classroom Storey Building</h2>
+            <p class="section-subtitle">A modern two-storey classroom block to ease congestion and support CBC learning</p>
+
+            <div class="row g-4">
+                <!-- Project Overview -->
+                <div class="col-lg-7">
+                    <div class="feature-card" style="height: 100%;">
+                        <h3 class="feature-title mb-3"><i class="fas fa-building me-2"></i>Project Overview</h3>
+                        <p class="feature-description">
+                            The TFalls Foundation 6-Classroom Storey Building is a ground-plus-first-floor structure designed to provide modern, spacious learning spaces for Mt Angels' growing population. With over 1,400 learners and rising enrolment each year, the school urgently needed additional classrooms to ease congestion and meet CBC infrastructure standards.
+                        </p>
+                        <p class="feature-description">
+                            The building houses <strong>6 fully equipped classrooms</strong> &mdash; 3 on the ground floor and 3 on the first floor &mdash; built to modern standards with proper ventilation, lighting, and durable finishes.
+                        </p>
+
+                        <div class="row mt-4">
+                            <div class="col-6 mb-3">
+                                <div class="text-center p-3" style="background: #f0f4ff; border-radius: 12px;">
+                                    <h4 style="color: var(--primary-color); font-weight: 800; margin-bottom: 4px;">6</h4>
+                                    <small style="color: #718096;">Classrooms</small>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="text-center p-3" style="background: #f0f4ff; border-radius: 12px;">
+                                    <h4 style="color: var(--primary-color); font-weight: 800; margin-bottom: 4px;">2</h4>
+                                    <small style="color: #718096;">Floors</small>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="text-center p-3" style="background: #f0f4ff; border-radius: 12px;">
+                                    <h4 style="color: var(--primary-color); font-weight: 800; margin-bottom: 4px;">300+</h4>
+                                    <small style="color: #718096;">Learners Served</small>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="text-center p-3" style="background: #f0f4ff; border-radius: 12px;">
+                                    <h4 style="color: var(--primary-color); font-weight: 800; margin-bottom: 4px;">CBC</h4>
+                                    <small style="color: #718096;">Compliant Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Photo -->
+                <div class="col-lg-5">
+                    <div class="feature-card text-center" style="height: 100%;">
+                        <figure class="team-group-photo" style="margin: 0;">
+                            <img th:src="@{/images/innovation/tfalls-building.jpg}" alt="TFalls 6-Classroom Storey Building"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();"
+                                 style="width: 100%; border-radius: 12px; object-fit: cover;">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-building"></i>
+                                <span>Photo coming soon</span>
+                            </div>
+                        </figure>
+                        <p class="mt-3" style="color: #718096; font-size: 0.9rem;">TFalls Foundation 6-Classroom Storey Building</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Construction Gallery -->
+            <div class="feature-card mt-4">
+                <h3 class="feature-title mb-3"><i class="fas fa-camera me-2"></i>Construction Progress</h3>
+                <p class="feature-description mb-4">Photos documenting the construction journey of the storey building.</p>
+                <div class="row g-3">
+                    <div class="col-md-4 col-6">
+                        <figure class="team-group-photo" style="margin: 0; aspect-ratio: 4/3;">
+                            <img th:src="@{/images/innovation/building-1.jpg}" alt="Construction phase 1"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();"
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-image"></i>
+                                <span>Photo</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <figure class="team-group-photo" style="margin: 0; aspect-ratio: 4/3;">
+                            <img th:src="@{/images/innovation/building-2.jpg}" alt="Construction phase 2"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();"
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-image"></i>
+                                <span>Photo</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <figure class="team-group-photo" style="margin: 0; aspect-ratio: 4/3;">
+                            <img th:src="@{/images/innovation/building-3.jpg}" alt="Construction phase 3"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();"
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-image"></i>
+                                <span>Photo</span>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT 2: TFALLS FIELD -->
+    <section class="featured-section" id="field">
+        <div class="container">
+            <h2 class="section-title">TFalls Field</h2>
+            <p class="section-subtitle">From 1.5 acres of government land to a proper sports and activities ground</p>
+
+            <div class="row g-4">
+                <!-- Field Photo -->
+                <div class="col-lg-5">
+                    <div class="feature-card text-center" style="height: 100%;">
+                        <figure class="team-group-photo" style="margin: 0;">
+                            <img th:src="@{/images/innovation/tfalls-field.jpg}" alt="TFalls Field at Mt Angels"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();"
+                                 style="width: 100%; border-radius: 12px; object-fit: cover;">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-futbol"></i>
+                                <span>Photo coming soon</span>
+                            </div>
+                        </figure>
+                        <p class="mt-3" style="color: #718096; font-size: 0.9rem;">TFalls Field &mdash; Mt Angels Comprehensive School</p>
+                    </div>
+                </div>
+
+                <!-- Field Overview -->
+                <div class="col-lg-7">
+                    <div class="feature-card" style="height: 100%;">
+                        <h3 class="feature-title mb-3"><i class="fas fa-futbol me-2"></i>About TFalls Field</h3>
+                        <p class="feature-description">
+                            In May 2025, Laikipia County donated <strong>1.5 acres of land</strong> to Mt Angels Comprehensive School, increasing the school's total size to approximately <strong>3 acres</strong>. This expansion was critical &mdash; the school had long struggled with limited space for extracurricular activities, assemblies, and sports.
+                        </p>
+                        <p class="feature-description">
+                            The TFalls Foundation stepped in to transform this raw land into <strong>TFalls Field</strong> &mdash; a levelled, usable sports and activities ground that gives learners the space they need for football, athletics, PE lessons, and school events.
+                        </p>
+
+                        <div class="row mt-4">
+                            <div class="col-6 mb-3">
+                                <div class="text-center p-3" style="background: #f0fff4; border-radius: 12px;">
+                                    <h4 style="color: #2f855a; font-weight: 800; margin-bottom: 4px;">1.5</h4>
+                                    <small style="color: #718096;">Acres Donated</small>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="text-center p-3" style="background: #f0fff4; border-radius: 12px;">
+                                    <h4 style="color: #2f855a; font-weight: 800; margin-bottom: 4px;">3</h4>
+                                    <small style="color: #718096;">Total Acres Now</small>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="text-center p-3" style="background: #f0fff4; border-radius: 12px;">
+                                    <h4 style="color: #2f855a; font-weight: 800; margin-bottom: 4px;">2025</h4>
+                                    <small style="color: #718096;">Land Donated</small>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="text-center p-3" style="background: #f0fff4; border-radius: 12px;">
+                                    <h4 style="color: #2f855a; font-weight: 800; margin-bottom: 4px;">1,400+</h4>
+                                    <small style="color: #718096;">Learners Benefit</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Field Gallery -->
+            <div class="feature-card mt-4">
+                <h3 class="feature-title mb-3"><i class="fas fa-camera me-2"></i>TFalls Field Gallery</h3>
+                <p class="feature-description mb-4">The transformation of the 1.5-acre land into TFalls Field.</p>
+                <div class="row g-3">
+                    <div class="col-md-4 col-6">
+                        <figure class="team-group-photo" style="margin: 0; aspect-ratio: 4/3;">
+                            <img th:src="@{/images/innovation/field-1.jpg}" alt="TFalls Field progress 1"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();"
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-image"></i>
+                                <span>Photo</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <figure class="team-group-photo" style="margin: 0; aspect-ratio: 4/3;">
+                            <img th:src="@{/images/innovation/field-2.jpg}" alt="TFalls Field progress 2"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();"
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-image"></i>
+                                <span>Photo</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <figure class="team-group-photo" style="margin: 0; aspect-ratio: 4/3;">
+                            <img th:src="@{/images/innovation/field-3.jpg}" alt="TFalls Field progress 3"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();"
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="team-group-photo-fallback">
+                                <i class="fas fa-image"></i>
+                                <span>Photo</span>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTHER INFRASTRUCTURE -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">Other Infrastructure Development</h2>
+            <p class="section-subtitle">Government and community-funded projects that have shaped Mt Angels</p>
+
+            <div class="row g-4">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto"><i class="fas fa-toilet"></i></div>
+                        <h3 class="feature-title">Sanitation Block</h3>
+                        <p class="feature-description">
+                            Funded by <strong>NGCDF Laikipia West</strong> (FY 2018/19) to improve hygiene facilities for learners and staff.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto"><i class="fas fa-school"></i></div>
+                        <h3 class="feature-title">NGCDF Classroom Block</h3>
+                        <p class="feature-description">
+                            A classroom block funded by <strong>NGCDF Laikipia West</strong> (FY 2019/20) to ease congestion as enrolment surged past 1,000 learners.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto"><i class="fas fa-utensils"></i></div>
+                        <h3 class="feature-title">School Feeding Programme</h3>
+                        <p class="feature-description">
+                            A parent-driven initiative since the early 2000s that continues to nourish learners daily &mdash; sustained even after the introduction of Free Primary Education in 2003.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="feature-card text-center">
+                <h3 class="feature-title">Support Our Development</h3>
+                <p class="feature-description mb-4">
+                    Mt Angels is still growing. We need support for a library, computer room, home science room, and more classrooms to fully transition to CBC.
+                </p>
+                <a href="/contact#support" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-heart me-2"></i>
+                    Contribute to Our Future
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

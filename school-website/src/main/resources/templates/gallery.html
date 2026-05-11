@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Mt Angels Comprehensive School</title>
+    <meta name="description" content="Photo gallery of Mt Angels Comprehensive School - campus, events, sports, and school life.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/minimal.css}">
+    <style>
+        .gallery-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 2rem; }
+        .gallery-filter-btn { padding: 8px 20px; border: 2px solid var(--primary-color); border-radius: 30px; background: transparent; color: var(--primary-color); font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; }
+        .gallery-filter-btn:hover, .gallery-filter-btn.active { background: var(--primary-color); color: #fff; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .gallery-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item .gallery-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: #fff; transform: translateY(100%); transition: transform 0.3s ease; }
+        .gallery-item:hover .gallery-overlay { transform: translateY(0); }
+        .gallery-overlay h4 { font-size: 1rem; margin-bottom: 4px; }
+        .gallery-overlay p { font-size: 0.8rem; opacity: 0.8; margin: 0; }
+        .gallery-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #e8ecf1 0%, #d1d9e6 100%); color: #8896a7; }
+        .gallery-placeholder i { font-size: 2.5rem; margin-bottom: 8px; }
+        .gallery-placeholder span { font-size: 0.85rem; }
+        /* Lightbox */
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; align-items: center; justify-content: center; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 85vh; border-radius: 8px; }
+        .lightbox-close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 2rem; cursor: pointer; z-index: 10000; }
+        .lightbox-caption { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); color: #fff; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div th:replace="~{fragments/navbar :: navbar(activePage='gallery')}"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>School Gallery</h1>
+            <p class="subtitle">A picture is worth a thousand words</p>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Our School in Pictures</h2>
+            <p class="section-subtitle">Explore campus life, events, sports, and everyday moments at Mt Angels</p>
+
+            <!-- Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="gallery-filter-btn active" data-filter="all">All</button>
+                <button class="gallery-filter-btn" data-filter="campus">Campus</button>
+                <button class="gallery-filter-btn" data-filter="events">Events</button>
+                <button class="gallery-filter-btn" data-filter="sports">Sports</button>
+                <button class="gallery-filter-btn" data-filter="classroom">Classroom</button>
+                <button class="gallery-filter-btn" data-filter="community">Community</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Use existing hero images as initial gallery content -->
+                <div class="gallery-item" data-category="campus">
+                    <img th:src="@{/images/hero/slide-1.jpeg}" alt="Mt Angels Campus">
+                    <div class="gallery-overlay">
+                        <h4>School Campus</h4>
+                        <p>Mt Angels Comprehensive School</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <img th:src="@{/images/hero/slide-2.jpeg}" alt="Mt Angels Campus">
+                    <div class="gallery-overlay">
+                        <h4>Campus View</h4>
+                        <p>School grounds and buildings</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img th:src="@{/images/hero/slide-3.jpeg}" alt="School Events">
+                    <div class="gallery-overlay">
+                        <h4>School Life</h4>
+                        <p>Daily activities at Mt Angels</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="classroom">
+                    <img th:src="@{/images/hero/slide-4.jpeg}" alt="Classroom Activities">
+                    <div class="gallery-overlay">
+                        <h4>Learning in Action</h4>
+                        <p>Our learners at work</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <img th:src="@{/images/hero/slide-5.jpeg}" alt="School Facilities">
+                    <div class="gallery-overlay">
+                        <h4>School Facilities</h4>
+                        <p>Infrastructure and grounds</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img th:src="@{/images/hero/slide-6.jpeg}" alt="School Events">
+                    <div class="gallery-overlay">
+                        <h4>School Events</h4>
+                        <p>Celebrations and gatherings</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="community">
+                    <img th:src="@{/images/hero/slide-7.jpeg}" alt="Community Activities">
+                    <div class="gallery-overlay">
+                        <h4>Community</h4>
+                        <p>Parents, teachers, and learners together</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <img th:src="@{/images/hero/slide-8.jpeg}" alt="Sports Activities">
+                    <div class="gallery-overlay">
+                        <h4>Sports &amp; Activities</h4>
+                        <p>Extracurricular life at Mt Angels</p>
+                    </div>
+                </div>
+
+                <!-- Placeholder slots for future uploads -->
+                <div class="gallery-item" data-category="campus">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <span>More photos coming</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <span>More photos coming</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <span>More photos coming</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="classroom">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <span>More photos coming</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="news-section">
+        <div class="container">
+            <div class="feature-card text-center">
+                <h3 class="feature-title">Have photos to share?</h3>
+                <p class="feature-description mb-4">
+                    If you have photos of school events, sports days, graduations, or any school moments, we'd love to feature them in our gallery.
+                </p>
+                <a href="/contact" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-upload me-2"></i>
+                    Share Your Photos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img src="" alt="" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // Gallery filter
+        document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.gallery-filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function() {
+                lightboxImg.src = this.src;
+                const overlay = this.parentElement.querySelector('.gallery-overlay h4');
+                lightboxCaption.textContent = overlay ? overlay.textContent : '';
+                lightbox.classList.add('active');
+            });
+        });
+
+        document.getElementById('lightbox-close').addEventListener('click', () => lightbox.classList.remove('active'));
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === this) this.classList.remove('active');
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.gallery-item').forEach((card, i) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = `opacity 0.5s ease ${i * 0.05}s, transform 0.5s ease ${i * 0.05}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

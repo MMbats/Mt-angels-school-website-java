@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics &amp; Performance - Mt Angels Comprehensive School</title>
+    <meta name="description" content="Academic performance history and leadership of Mt Angels Comprehensive School from its founding to today.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/minimal.css}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div th:replace="~{fragments/navbar :: navbar(activePage='academics')}"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Academics &amp; Performance</h1>
+            <p class="subtitle">A track record of excellence since the beginning</p>
+            <div class="hero-buttons">
+                <a href="#performance" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-chart-line me-2"></i>Performance History
+                </a>
+                <a href="#leadership" class="btn-hero btn-outline-hero">
+                    <i class="fas fa-users me-2"></i>School Leadership
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 mx-auto text-center">
+                    <h2 class="section-title">Working Hard For Excellence</h2>
+                    <p style="color: #4a5568; font-size: 1.05rem; line-height: 1.8;">
+                        Mt Angels Comprehensive School has consistently been recognised as a top performer in Laikipia West Sub-county. From our early KCPE results to the new Competency Based Education (CBE) assessments, our learners continue to demonstrate strong academic discipline and readiness for the next stage of their education.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFORMANCE HISTORY TABLE -->
+    <section class="news-section" id="performance">
+        <div class="container">
+            <h2 class="section-title">KCPE Performance History</h2>
+            <p class="section-subtitle">Year-by-year results since the school began presenting candidates</p>
+
+            <div class="feature-card">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle" style="border-collapse: separate; border-spacing: 0;">
+                        <thead>
+                            <tr style="background: var(--primary-color); color: #fff;">
+                                <th style="padding: 14px 18px; border-radius: 8px 0 0 0;">Year</th>
+                                <th style="padding: 14px 18px;">Candidates</th>
+                                <th style="padding: 14px 18px;">Mean Score</th>
+                                <th style="padding: 14px 18px;">Mean Grade</th>
+                                <th style="padding: 14px 18px;">Top Student Score</th>
+                                <th style="padding: 14px 18px; border-radius: 0 8px 0 0;">Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>2024</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td><span class="badge bg-info">Last KCPE cohort</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>2023</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2022</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2021</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2020</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td><span class="badge bg-warning text-dark">COVID year</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>2019</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2018</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2017</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2016</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2015</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2014</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2013</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2012</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2011</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2010</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2009</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2008</strong></td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td><span class="badge bg-success">First KCPE class</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="alert alert-info mt-3">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Note:</strong> Fill in the actual scores as records are compiled. Dash (&mdash;) indicates data pending entry.
+                </div>
+            </div>
+
+            <!-- CBE / KPSEA / KJSEA -->
+            <div class="feature-card mt-4">
+                <h3 class="feature-title mb-3"><i class="fas fa-book-open me-2"></i>Competency Based Education (CBE) Assessments</h3>
+                <p class="feature-description">
+                    With the transition to the <strong>Competency Based Curriculum (CBC)</strong>, Mt Angels now participates in the Kenya Primary School Education Assessment (KPSEA) at Grade 6 and the Kenya Junior Secondary Education Assessment (KJSEA) at Grade 9.
+                </p>
+                <div class="table-responsive mt-3">
+                    <table class="table table-hover align-middle">
+                        <thead>
+                            <tr style="background: var(--primary-color); color: #fff;">
+                                <th style="padding: 14px 18px; border-radius: 8px 0 0 0;">Year</th>
+                                <th style="padding: 14px 18px;">Assessment</th>
+                                <th style="padding: 14px 18px;">Candidates</th>
+                                <th style="padding: 14px 18px;">Performance Summary</th>
+                                <th style="padding: 14px 18px; border-radius: 0 8px 0 0;">Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>2025</strong></td>
+                                <td>KJSEA (Grade 9)</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td><span class="badge bg-primary">First KJSEA cohort</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>2024</strong></td>
+                                <td>KPSEA (Grade 6)</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2023</strong></td>
+                                <td>KPSEA (Grade 6)</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td><span class="badge bg-success">First KPSEA cohort</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHOOL LEADERSHIP HISTORY -->
+    <section class="featured-section" id="leadership">
+        <div class="container">
+            <h2 class="section-title">School Leadership Through the Years</h2>
+            <p class="section-subtitle">From headteachers under the old 8-4-4 system to principals under CBC</p>
+
+            <div class="feature-card mb-4">
+                <p class="feature-description">
+                    <i class="fas fa-info-circle me-2" style="color: var(--primary-color);"></i>
+                    Under the old 8-4-4 curriculum, the head of a primary school was called a <strong>Headteacher</strong>. With the introduction of the Competency Based Curriculum (CBC) and the elevation of primary schools to comprehensive schools (including Junior Secondary), the title changed to <strong>Principal</strong>.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Madam Mercy Ngatia -->
+                <div class="col-lg-6">
+                    <div class="leader-feature">
+                        <figure class="leader-photo">
+                            <div class="leader-photo-fallback" style="display:flex;"><i class="fas fa-user-tie"></i></div>
+                        </figure>
+                        <div class="leader-body">
+                            <span class="staff-role">First Headteacher (Government-posted)</span>
+                            <h3 class="leader-name">Madam Mercy Ngatia</h3>
+                            <p class="leader-meta">Late 1990s &ndash; &hellip;</p>
+                            <p class="leader-bio">The first government-posted teacher who also served as headteacher. She laid the administrative foundation of Mt Angels during its earliest years as a formal primary school.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder for other headteachers -->
+                <div class="col-lg-6">
+                    <div class="leader-feature">
+                        <figure class="leader-photo">
+                            <div class="leader-photo-fallback" style="display:flex;"><i class="fas fa-user-tie"></i></div>
+                        </figure>
+                        <div class="leader-body">
+                            <span class="staff-role">Headteacher</span>
+                            <h3 class="leader-name">To Be Updated</h3>
+                            <p class="leader-meta">Period of service</p>
+                            <p class="leader-bio">Details about the headteacher's contributions and tenure will be added here.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Liberata Mbatia - Current Principal -->
+                <div class="col-lg-12">
+                    <div class="leader-feature" style="border-left: 4px solid var(--accent-color);">
+                        <figure class="leader-photo">
+                            <img th:src="@{/images/staff/principal.jpg}" alt="Liberata Mbatia, Principal"
+                                 onerror="this.parentElement.classList.add('no-image'); this.remove();">
+                            <div class="leader-photo-fallback"><i class="fas fa-user-tie"></i></div>
+                        </figure>
+                        <div class="leader-body">
+                            <span class="staff-role" style="background: var(--accent-color); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;">Current Principal</span>
+                            <h3 class="leader-name">Liberata Mbatia</h3>
+                            <p class="leader-meta">Appointed Principal under the CBC transition &middot; 25+ years in education</p>
+                            <p class="leader-bio">Under Mrs. Mbatia's leadership, Mt Angels has grown to over 1,500 learners, successfully transitioned to the CBC curriculum, and continues to expand its infrastructure to meet the demands of a modern comprehensive school.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="news-section">
+        <div class="container">
+            <div class="feature-card text-center">
+                <h3 class="feature-title">Have historical records or photos to share?</h3>
+                <p class="feature-description mb-4">
+                    Help us build a complete record of Mt Angels' academic journey. If you have KCPE results, photos, or memories from past years, we'd love to hear from you.
+                </p>
+                <a href="/contact" class="btn-hero btn-primary-hero">
+                    <i class="fas fa-envelope me-2"></i>
+                    Share With Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.feature-card, .leader-feature').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
